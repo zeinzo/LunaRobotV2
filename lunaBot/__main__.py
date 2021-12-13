@@ -25,9 +25,9 @@ from lunaBot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from lunaBot.modules import ALL_MODULES
-from lunaBot.modules.helper_funcs.chat_status import is_user_admin
-from lunaBot.modules.helper_funcs.misc import paginate_modules
+from umarubot.modules import ALL_MODULES
+from umaruBot.modules.helper_funcs.chat_status import is_user_admin
+from umaruBot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -72,10 +72,10 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
+UMARU_IMG = "https://telegra.ph/file/079bfb48ea2aab709b01e.jpg"
 
 PM_START_TEXT = """
-**hey I am Luna Robot** [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
+**hey I am Umaru** [ㅤ](https://telegra.ph/file/079bfb48ea2aab709b01e.jpg)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 **I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -84,7 +84,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Luna To Your group ➕", url="http://t.me/lunatapibot?startgroup=true"),
+        InlineKeyboardButton(text="➕ Add Luna To Your group ➕", url="http://t.me/Umarutapibot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="luna_"),
@@ -101,7 +101,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-**Main commands:**  [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
+**Main commands:**  [ㅤ](https://telegra.ph/file/079bfb48ea2aab709b01e.jpg)
 ❂ /start: Starts me! You've probably already used this.
 ❂ /help: Sends this message; I'll tell you more about myself.
 
@@ -111,7 +111,7 @@ If you want to report any bugs or need any help with setting up Alina, reach us 
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
- [klick disini](https://t.me/zeinzo_1) ❤️
+ [klick disini](https://t.me/zenfrans) ❤️
 """
 
 IMPORTED = {}
@@ -357,7 +357,7 @@ def help_button(update, context):
 @run_async
 def luna_about_callback(update, context):
     query = update.callback_query
-    if query.data == "luna_":
+    if query.data == "umaru_":
         query.message.edit_text(
             text="""Hi again! I'am a full-fledged group management bot built to help you manage your group easily.\n
                     \nI can do lot of stuff, some of them are:
@@ -373,17 +373,17 @@ def luna_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Setup Guide", callback_data="luna_aselole"
+                            text="Setup Guide", callback_data="umaru_aselole"
                         ),
                         InlineKeyboardButton(
-                            text="T & C", callback_data="luna_puqi"
+                            text="T & C", callback_data="umaru_puqi"
                         ),
                     ],
-                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="luna_back")],
+                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="umaru_back")],
                 ]
             ),
         )
-    elif query.data == "luna_back":
+    elif query.data == "umaru_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -392,13 +392,13 @@ def luna_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "luna_basichelp":
+    elif query.data == "umaru_basichelp":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
             f"\n\n1.) first, add me to your group.\n"
             f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
             f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @LunaAssistant to your group or type /join to invite her.\n"
+            f"4.) add @ to your group or type /join to invite her.\n"
             f"5.) turn on the video chat first before start to play music.\n"
             f"\n📌 if userbot doesn't join voice chat make sure voice chat is active, or type /leave then type /join again..",
             parse_mode=ParseMode.MARKDOWN,
@@ -406,20 +406,20 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="luna_notes"),
+                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="umaru_admin"),
+                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="umaru_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="luna_support"),
+                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="umaru_support"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_back"),
+                    InlineKeyboardButton(text="Back", callback_data="umaru_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "luna_admin":
+    elif query.data == "umaru_admin":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
             f"\n\n/play (song name) - play song from youtube"
@@ -436,7 +436,7 @@ def luna_about_callback(update, context):
             ),
         )
 
-    elif query.data == "luna_notes":
+    elif query.data == "umaru_notes":
         query.message.edit_text(
             text=f"──「 Advanced CMD 」──\n\n"
             f"/start (in group) - see the bot alive status"
@@ -449,7 +449,7 @@ def luna_about_callback(update, context):
                 [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
             ),
         )
-    elif query.data == "luna_support":
+    elif query.data == "umaru_support":
         query.message.edit_text(
             text=f"──「 Admin CMD 」──\n"
             f"\n/player - show the music playing status"
@@ -468,15 +468,15 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="umaru_basichelp"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "luna_credit":
+    elif query.data == "umaru_credit":
         query.message.edit_text(
-            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Lᴜɴᴀ Dᴇᴠ's` </b>\n"
+            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ umaru Dᴇᴠ's` </b>\n"
             f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ Lᴜɴᴀ",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -487,17 +487,17 @@ def luna_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Yui", url="https://t.me/Badboyanim"),
-                    InlineKeyboardButton(text="Luna", url="https://t.me/tdrki_1"),
+                    InlineKeyboardButton(text="umaru", url="https://t.me/zenfrans"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="umaru_basichelp"),
                  
                  ]
                 ]
             ),
         )
 
-    elif query.data == "luna_aselole":
+    elif query.data == "umaru_aselole":
         query.message.edit_text(
             text=f"｢ Setup Guide 」\n"
                  f"\nYou can add me to your group by clicking this link and selecting the chat.\n"
@@ -509,29 +509,29 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins Permissions", callback_data="luna_asu"),
-                    InlineKeyboardButton(text="Anti Spam", callback_data="luna_asi"),
+                    InlineKeyboardButton(text="Admins Permissions", callback_data="umaru_asu"),
+                    InlineKeyboardButton(text="Anti Spam", callback_data="umaru_asi"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_"),
+                    InlineKeyboardButton(text="Back", callback_data="umaru_"),
                  
                  ]
                 ]
             ),
         )
 
-    elif query.data == "luna_asu":
+    elif query.data == "umaru_asu":
         query.message.edit_text(
             text=f"｢ Admin Permissions 」\n"
-                     f"\nTo avoid slowing down, Luna caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Luna will only find out ~10 minutes later.\n"
-                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Luna to check who the admins are again and their permissions\n"
+                     f"\nTo avoid slowing down, umaru caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), umaru will only find out ~10 minutes later.\n"
+                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force umaru to check who the admins are again and their permissions\n"
                     f"\nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!\n"
-                    f"\nThis has nothing to do with Luna's rights; this is all about YOUR permissions as an admin. Luna respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Luna. Similarly, to change Luna settings, you need to have the Change group info permission.\n"
-                    f"\nThe message very clearly states that you need these rights - not Luna.",
+                    f"\nThis has nothing to do with Luna's rights; this is all about YOUR permissions as an admin. umaru respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with umaru. Similarly, to change Luna settings, you need to have the Change group info permission.\n"
+                    f"\nThe message very clearly states that you need these rights - not umaru.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_aselole")]]
+                [[InlineKeyboardButton(text="Back", callback_data="umaru_aselole")]]
             ),
         )
 
@@ -539,7 +539,7 @@ def luna_about_callback(update, context):
         query.message.edit_text(
             text=f"｢ Anti-Spam Settings 」\n"
                      f"\nAntispam: "
-                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @lunasupportgroup\n"
+                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @UmaruSupport\n"
                      f"\n✪ Anti-Flood allows you to keep your chat clean from flooding."
                      f"\n✪ With the help of Blaclists you can blacklist words,sentences and stickers which you don't want to be used by group members."
                      f"\n✪ By enabling Reports, admins get notified when users reports in chat."
@@ -553,7 +553,7 @@ def luna_about_callback(update, context):
             ),
         )
 
-    elif query.data == "luna_puqi":
+    elif query.data == "umaru_puqi":
         query.message.edit_text(
             text=f" ｢ Terms and Conditions 」\n"
                 f"\nTo use this bot, You need to agree with Terms and Conditions.\n"
@@ -569,14 +569,14 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                     InlineKeyboardButton(text="Credits", callback_data="luna_angjay"),
-                     InlineKeyboardButton(text="Back", callback_data="luna_"),
+                     InlineKeyboardButton(text="Credits", callback_data="umaru_angjay"),
+                     InlineKeyboardButton(text="Back", callback_data="umaru_"),
                   ]
                 ]
             ),
         )
 
-    elif query.data == "luna_angjay":
+    elif query.data == "umaru_angjay":
         query.message.edit_text(
             text=f"Luna is a powerful bot for managing groups with additional features.\n"
               f"\nLuna's Licensed Under The GNU (General Public License v3.0)\n"
@@ -587,8 +587,8 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                     InlineKeyboardButton(text="Back", callback_data="luna_puqi"),
-                     InlineKeyboardButton(text="☎️ Support", url=f"https://t.me/lunasupportgroup"),
+                     InlineKeyboardButton(text="Back", callback_data="umaru_puqi"),
+                     InlineKeyboardButton(text="☎️ Support", url=f"https://t.me/UmaruSupport"),
                   ]
                 ]
             ),
