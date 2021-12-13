@@ -1,7 +1,7 @@
-lunaBot/config.py
-lunaBot/*.session
+umarubot/config.py
+umarubot/*.session
 lunaBot/*.session-journal
-lunaBot/config.ini
+umarubot/config.ini
 log.txt
 *.pyc
 .idea/
@@ -9,13 +9,13 @@ log.txt
 .pydevproject
 .directory
 .vscode
-lunaBot/modules/helper_funcs/temp.txt
-lunaBot/elevated_users.json
+umarubot/modules/helper_funcs/temp.txt
+umarubot/elevated_users.json
 start-3.9.bat
 *.session
 kangsticker.png
 venv
 env
-lunaBot.session-journal
+umarubot.session-journal
 updates.txt
 *.exe
