@@ -1,5 +1,5 @@
 from envparse import env
-from lunaBot import LOGGER
+from umaruBot import LOGGER
 
 DEFAULTS = {
     "LOAD_MODULES": True,
