@@ -1,4 +1,4 @@
-from lunaBot import telethn as tbot
+from umaruBot import telethn as tbot
 import requests
 import time
 
