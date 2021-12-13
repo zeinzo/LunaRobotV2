@@ -1,6 +1,6 @@
 
 
-<p align="center">
+
   <img src=" https://telegra.ph/file/079bfb48ea2aab709b01e.jpg">
 <h1 align="center"><b> Umaru bot </b></h1>
 </p>
@@ -8,7 +8,7 @@
 <p align='center'>
   <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=flat-square&logo=python&color=blue" /> </a>
   <a href="https://github.com/wahyu213/LunaRobotV2/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" /> </a>
-  <a href="https://t.me/Umarusupport"><img src="https://img.shields.io/badge/Join-umaru%20support-red.svg?logo=Telegram"></a>
+  <a href="https://t.me/UmaruSupport"><img src="https://img.shields.io/badge/Join-umaru%20support-red.svg?logo=Telegram"></a>
   <a href="https://t.me/zenfrans"><img src="https://img.shields.io/badge/Developer-Umaru%20bot-blue.svg?logo=telegram"></a>
 
 
