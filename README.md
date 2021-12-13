@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src=" https://telegra.ph/file/079bfb48ea2aab709b01e.jpg">
-<h1 align="center"><b> Luna Robot </b></h1>
+<h1 align="center"><b> Umaru bot </b></h1>
 </p>
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
