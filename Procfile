@@ -1,1 +1,1 @@
-worker: python3 -m lunaBot
+worker: python3 -m umarubot
