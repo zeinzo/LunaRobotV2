@@ -7,7 +7,7 @@ gtts
 faker
 beautifulsoup4
 requests
-python-telegram-bot==12.8
+python-telegram-bot==13.11.0
 sqlalchemy==1.3.20
 ffmpeg-python
 psycopg2-binary
@@ -45,7 +45,7 @@ cachetools
 ujson
 pretty_errors
 TgCrypto
-Pyrogram
+pyrogram==1.4.12
 yt-dlp
 youtube_search_python
 youtube_search
