@@ -72,46 +72,47 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
+LUNA_IMG = "https://telegra.ph/file/d924c9bbe8eff97e5dd17.jpg"
 
 PM_START_TEXT = """
-**hey I am Luna Robot** [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
+**ɪ ᴀᴍ ɴᴏɪɴᴏɪ ɴᴏɪɴᴏɪ🌸🤖** [ㅤ](https://telegra.ph/file/d924c9bbe8eff97e5dd17.jpg)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-**I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
+**ɪ'ᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴄᴏᴏʟ ᴍᴏᴅᴜʟᴇs. ғᴇᴇʟ ғʀᴇᴇ ᴛᴏ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs!!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-☉ **Click the button below for more.**
+☉ **ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ.**
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Luna To Your group ➕", url="http://t.me/lunatapibot?startgroup=true"),
+        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ", url="http://t.me/BAZIGAR_XD"),
+        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="luna_"),
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="http://t.me/NOINOISUPPORT"),
     ],
     [
-        InlineKeyboardButton(text="About", callback_data="luna_"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🌸", url="http://t.me/NOINOI_BOT?startgroup=true"),
         InlineKeyboardButton(
-            text="Music Player", callback_data="luna_basichelp"
+            text="ᴍᴜsɪᴄ ᴄᴏᴍᴍᴀɴᴅs", callback_data="luna_basichelp"
         ),
     ],
     [
         
         InlineKeyboardButton(
-            text="❓ Help&Commands", callback_data="help_back"),
+            text="ᴍᴀɴᴀɢᴇʀ ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-**Main commands:**  [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
-❂ /start: Starts me! You've probably already used this.
+**Main commands:**  [ㅤ](https://telegra.ph/file/d924c9bbe8eff97e5dd17.jpg)
+❂ /start: sᴛᴀʀᴛ ᴍᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘʀᴏʙᴀʙʟʏ ᴀʟʀᴇᴀᴅʏ ᴜsᴇᴅ ᴛʜɪs..
 ❂ /help: Sends this message; I'll tell you more about myself.
 
-All commands can either be used with / or !.
-If you want to report any bugs or need any help with setting up Alina, reach us at here"""
+ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ᴇɪᴛʜᴇʀ ʙᴇ ᴜsᴇᴅ ᴇɪᴛʜᴇʀ / ᴏʀ  ! ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴘᴏʀᴛ ᴀɴʏ ʙᴜɢs ᴏʀ ɴᴇᴇᴅ ʜᴇʟᴘ ᴡɪᴛʜ sᴇᴛᴛɪɴɢ ᴜᴘ ᴀʟɪɴᴀ ʀᴇᴀᴄʜ ᴜs ᴀᴛ ʜᴇᴀʀ"""
 
 
 
-DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
- [klick disini](https://t.me/zeinzo_1) ❤️
+DONATE_STRING = """ʜᴇʜᴇ ʏᴏᴜ ᴄᴀɴ ᴅᴏɴᴇᴛ ғʀᴏᴍ ʜᴇᴀʀ!
+ [NOINOI](https://t.me/NOINOISUPPORT) ❤️
 """
 
 IMPORTED = {}
